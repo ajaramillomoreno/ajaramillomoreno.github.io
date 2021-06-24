@@ -1,1 +1,0 @@
-# ajaramillomoreno.github.io
