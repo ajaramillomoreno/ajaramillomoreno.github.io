@@ -85,10 +85,10 @@ author:
   bio              : "​Associate Research Scientist<br />Centro de Ciencias de la Atmósfera<br />Universidad Nacional Autónoma de México"
   location         : "Mexico City, Mexico"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "http://yourfullgooglescholarurl.com"
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  pubmed           :
+  googlescholar    : "https://scholar.google.com/citations?user=OWHpqFUAAAAJ&hl"
+  email            : "ajaramillo@atmosfera.unam.mx"
+  researchgate     : "https://www.researchgate.net/profile/Alejandro-Jaramillo-15"
   uri              :
   bitbucket        :
   codepen          :
@@ -96,20 +96,20 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "academicpages"
+  github           : "ajaramillomoreno"
   google_plus      :
   keybase          :
   instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
+  impactstory      :
   lastfm           :
-  linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  linkedin         : "https://www.linkedin.com/in/ajaramillomoreno/"
+  orcid            : "https://orcid.org/0000-0002-4175-7726"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "replacethistwitterhandle"
+  twitter          : "ajaramillo1985"
   vine             :
   weibo            :
   xing             :
