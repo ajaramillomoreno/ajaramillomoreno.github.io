@@ -82,10 +82,9 @@ analytics:
 author:
   name             : "Alejandro Jaramillo"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "​Associate Research Scientist<br />Centro de Ciencias de la Atmósfera, Universidad Nacional Autónoma de México"
   location         : "Mexico City, Mexico"
-  employer         : "Centro de Cienciad de la Atmósfera"
-  employer2        : "Universidad Nacional Autónoma de México"
+  employer         : 
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://yourfullgooglescholarurl.com"
   email            :
