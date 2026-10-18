@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Visual Studio Code
+.vscode/*
+!.vscode/extensions.json
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*~
+*.swp
+*.swo
+
+# Python cache (if used later)
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Build and dependency directories
+node_modules/
+dist/
