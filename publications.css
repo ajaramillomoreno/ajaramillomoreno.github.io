@@ -1,0 +1,32 @@
+/* Publications page — edit this file only when changing the appearance. */
+:root { --ink:#213247; --muted:#627389; --accent:#136785; --line:#e2e8ed; --background:#ffffff; --soft:#f4f7f8; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--background); color:var(--ink); font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; font-size:16px; line-height:1.7; }
+.shell { max-width:960px; margin:0 auto; padding:0 28px; }
+a { color:var(--accent); text-underline-offset:3px; }
+a:hover { color:#0a445c; }
+.site-header { border-bottom:1px solid var(--line); }
+.header-inner { display:flex; justify-content:space-between; align-items:center; gap:20px; min-height:78px; }
+.brand { color:var(--ink); font-weight:700; text-decoration:none; letter-spacing:-.025em; }
+nav { display:flex; flex-wrap:wrap; gap:20px; }
+.site-header nav a { color:var(--muted); text-decoration:none; font-size:14px; }
+.site-header nav a.active { color:var(--ink); font-weight:650; }
+.intro { padding:70px 0 34px; max-width:750px; }
+.eyebrow { color:var(--accent); letter-spacing:.16em; font-size:12px; font-weight:750; }
+h1 { font-family:Georgia,"Times New Roman",serif; font-size:clamp(42px,6vw,66px); letter-spacing:-.035em; line-height:1.12; font-weight:500; margin:16px 0 20px; }
+.intro p { color:var(--muted); font-size:18px; max-width:660px; }
+.section-nav { padding:16px 0 20px; border-bottom:1px solid var(--line); gap:12px; }
+.section-nav a { text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:7px 13px; font-size:13px; color:var(--ink); }
+.section-nav a:hover { background:var(--soft); }
+.section { padding:55px 0 12px; scroll-margin-top:30px; }
+h2 { font-family:Georgia,"Times New Roman",serif; font-size:33px; font-weight:500; letter-spacing:-.025em; margin:0 0 19px; }
+h3.year { font-size:19px; margin:36px 0 12px; padding-top:7px; border-top:1px solid var(--line); }
+.publication { padding:10px 0 16px; }
+.citation { margin:0; line-height:1.82; overflow-wrap:anywhere; }
+.citation strong { font-weight:750; }
+.citation a { font-size:.93em; }
+.section-note { margin:0 0 24px; color:var(--muted); }
+.site-footer { border-top:1px solid var(--line); margin-top:70px; padding:25px 0 40px; color:var(--muted); font-size:13px; }
+.site-footer .shell { display:flex; justify-content:space-between; gap:16px; }
+@media(max-width:650px){ .shell{padding:0 20px;} .header-inner{display:block;padding-top:18px;padding-bottom:16px;} .site-header nav{margin-top:8px;gap:15px;} .intro{padding-top:45px;} .section{padding-top:39px;} .site-footer .shell{display:block;} }

@@ -1,368 +1,145 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Alejandro Jaramillo Moreno</title>
-
-  <meta
-    name="description"
-    content="Página académica de Alejandro Jaramillo Moreno, investigador en ciencias de la atmósfera."
-  >
-
+  <meta name="description" content="Alejandro Jaramillo-Moreno — atmospheric scientist researching tropical climate dynamics, hydroclimatology, and climate variability.">
+  <title>Alejandro Jaramillo-Moreno | Atmospheric Scientist</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
-    rel="stylesheet"
-  >
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header class="header">
-  <div class="container nav">
-
-    <a href="#inicio" class="name">
-      Alejandro Jaramillo Moreno
-    </a>
-
-    <nav>
-      <a href="#investigacion">Investigación</a>
-      <a href="#publicaciones">Publicaciones</a>
-      <a href="#docencia">Docencia</a>
-      <a href="#estudiantes">Estudiantes</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-
-  </div>
-</header>
-
-
-<main>
-
-<section id="inicio" class="hero">
-
-  <div class="container hero-grid">
-
-    <div>
-
-      <p class="eyebrow">
-        Ciencias de la atmósfera · Dinámica del clima
-      </p>
-
-      <h1>
-        Alejandro Jaramillo Moreno
-      </h1>
-
-      <p class="subtitle">
-        Investigador en ciencias de la atmósfera
-      </p>
-
-      <p class="intro">
-        Mi investigación se centra en la dinámica de la atmósfera
-        tropical, la variabilidad climática, el transporte de humedad
-        y los procesos que controlan el clima regional en América Latina.
-      </p>
-
-      <div class="links">
-
-        <a href="mailto:TU_CORREO">
-          Correo
-        </a>
-
-        <a href="TU_LINK_ORCID" target="_blank">
-          ORCID
-        </a>
-
-        <a href="TU_LINK_GOOGLE_SCHOLAR" target="_blank">
-          Google Scholar
-        </a>
-
-        <a href="TU_LINK_GITHUB" target="_blank">
-          GitHub
-        </a>
-
-        <a href="files/cv.pdf" target="_blank">
-          CV
-        </a>
-
-      </div>
-
+  <!-- NAVIGATION: Update these links if you add pages later. -->
+  <header class="header">
+    <div class="container nav">
+      <a class="name" href="index.html">Alejandro Jaramillo-Moreno</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="#software">Software</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-
-    <div class="photo-container">
-
-      <img
-        src="images/profile.jpg"
-        alt="Alejandro Jaramillo Moreno"
-        class="profile-photo"
-      >
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="investigacion" class="section">
-
-  <div class="container">
-
-    <p class="section-label">
-      01
-    </p>
-
-    <h2>
-      Investigación
-    </h2>
-
-    <p>
-      Me interesa comprender cómo la circulación atmosférica tropical
-      organiza el transporte de humedad, la convección y la precipitación
-      en distintas escalas de tiempo.
-    </p>
-
-    <div class="research-grid">
-
-      <div>
-        <h3>Dinámica tropical</h3>
-
-        <p>
-          Variabilidad de la circulación atmosférica tropical y su
-          relación con la convección profunda y el clima regional.
-        </p>
+  <main>
+    <!-- INTRODUCTION: Change the text here to update your homepage introduction. -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Atmospheric Science · Tropical Climate</p>
+          <h1>Alejandro<br>Jaramillo-Moreno</h1>
+          <p class="subtitle">Atmospheric Scientist | Tropical Climate Dynamics | Hydroclimatology</p>
+          <p class="intro">I study the physical processes that shape tropical atmospheric circulation, convection, precipitation, and climate variability, with a particular interest in Mexico, Mesoamerica, the Caribbean, and tropical South America.</p>
+          <div class="links" aria-label="Academic profiles">
+            <a href="https://orcid.org/0000-0002-4175-7726" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+            <a href="https://github.com/ajaramillomoreno" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
+        </div>
+        <!-- PROFILE PHOTO: Keep assets/profile.jpg or change the path below. -->
+        <div class="photo-container">
+          <img src="assets/profile.jpg" alt="Portrait of Alejandro Jaramillo-Moreno" class="profile-photo">
+        </div>
       </div>
+    </section>
 
-
-      <div>
-        <h3>Variabilidad intraestacional</h3>
-
-        <p>
-          Estudio de la Oscilación Madden–Julian y de sus impactos
-          sobre la circulación atmosférica y la precipitación.
-        </p>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container narrow">
+        <p class="section-label">01 / ABOUT</p>
+        <h2>About</h2>
+        <p>I am a research scientist in the <strong>Departamento de Cambio Climático</strong> at the <strong>Instituto de Ciencias de la Atmósfera y Cambio Climático (ICAyCC)</strong>, <strong>Universidad Nacional Autónoma de México (UNAM)<strong>.</p>
+        <p>My research is driven by a central question: how do tropical atmospheric processes, from large-scale circulation to organized convection, shape rainfall and climate variability? I work across a range of time scales, from synoptic weather systems and intraseasonal oscillations to interannual climate fluctuations, seeking physical explanations for the patterns we observe.</p>
+        <p>Much of my work focuses on Mexico, Mesoamerica, the Caribbean, and northern South America. I have investigated the influence of the El Niño–Southern Oscillation (ENSO), the Madden–Julian Oscillation (MJO), and other modes of variability on precipitation, tropical cyclones, and regional hydroclimate. These questions connect atmospheric dynamics with practical challenges, including heavy rainfall, drought, thunderstorms, and vulnerability to weather-related hazards.</p>
+        <p>My research also includes studies of tropical clouds, aerosols, and atmospheric processes, reflecting an interest in understanding how different components of the climate system interact. I combine observations, reanalysis datasets, numerical simulations, and quantitative diagnostics to examine the mechanisms behind tropical weather and climate.</p>
+        <p>I value collaborative, reproducible research and the development of scientific tools that can be used by the wider community. Through open-source software such as <a href="https://github.com/ajaramillomoreno/PyWKSpectra" target="_blank" rel="noopener noreferrer">PyWKSpectra</a>, I aim to make methods for exploring tropical atmospheric variability easier to apply and reproduce.</p>
       </div>
+    </section>
 
-
-      <div>
-        <h3>Transporte de humedad</h3>
-
-        <p>
-          Jets de bajo nivel, corredores de humedad y su papel en
-          la hidroclimatología regional.
-        </p>
+    <!-- RESEARCH: Edit these four short descriptions as your priorities evolve. -->
+    <section class="section" id="research">
+      <div class="container">
+        <p class="section-label">02 / RESEARCH</p>
+        <h2>Research interests</h2>
+        <p class="section-intro">My research spans processes and time scales that influence tropical weather, rainfall, and regional climate.</p>
+        <div class="research-grid">
+          <article>
+            <h3>Tropical atmospheric dynamics</h3>
+            <p>Large-scale circulation, tropical waves, atmospheric convection, and their role in regional climate.</p>
+          </article>
+          <article>
+            <h3>Climate variability and predictability</h3>
+            <p>ENSO, the Madden–Julian Oscillation, and subseasonal-to-interannual variations in tropical rainfall.</p>
+          </article>
+          <article>
+            <h3>Hydroclimatology and extremes</h3>
+            <p>Rainfall variability, tropical cyclones, severe weather, and hydroclimatic hazards in Mexico and the Americas.</p>
+          </article>
+          <article>
+            <h3>Scientific computing</h3>
+            <p>Reproducible analysis, climate datasets, and open-source tools for atmospheric research.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-
-      <div>
-        <h3>Clima de América Latina</h3>
-
-        <p>
-          Procesos atmosféricos que controlan la variabilidad del clima
-          en México, Centroamérica, el Caribe y Sudamérica tropical.
-        </p>
+    <!-- PUBLICATIONS: The complete bibliography lives on publications.html. -->
+    <section class="section" id="publications">
+      <div class="container narrow">
+        <p class="section-label">03 / PUBLICATIONS</p>
+        <h2>Publications</h2>
+        <p>My publications include peer-reviewed journal articles, book chapters, and science communication pieces. The complete list is organized by category and publication year.</p>
+        <p><a class="text-link" href="publications.html">Explore all publications →</a></p>
       </div>
+    </section>
 
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="publicaciones" class="section">
-
-  <div class="container">
-
-    <p class="section-label">
-      02
-    </p>
-
-    <h2>
-      Publicaciones seleccionadas
-    </h2>
-
-
-    <div class="publication">
-
-      <span class="year">
-        2026
-      </span>
-
-      <div>
-
-        <h3>
-          Título de la publicación
-        </h3>
-
-        <p>
-          Jaramillo Moreno, A., Apellido, N. y Apellido, N.
-        </p>
-
-        <p>
-          <em>Journal of Geophysical Research: Atmospheres</em>
-        </p>
-
-        <a href="#">
-          DOI →
-        </a>
-
+    <!-- SOFTWARE: Public repositories only. Edit descriptions here. -->
+    <section class="section" id="software">
+      <div class="container">
+        <p class="section-label">04 / SOFTWARE</p>
+        <h2>Open-source software</h2>
+        <p class="section-intro">Publicly available software for reproducible atmospheric and climate research.</p>
+        <div class="software-list">
+          <article class="software-feature">
+            <!-- PYWKSPECTRA LOGO: assets/pywkspectra_logo.png -->
+            <img class="software-logo" src="assets/pywkspectra_logo.png" alt="PyWKSpectra logo" loading="lazy">
+            <div>
+              <p class="project-kind">CURRENT PACKAGE · PYTHON</p>
+              <h3>PyWKSpectra</h3>
+              <p>A Python package for Wheeler–Kiladis space–time spectral analysis of tropical atmospheric variability. Provides spectral diagnostics, visualization tools, and a reproducible example notebook.</p>
+              <a class="text-link" href="https://github.com/ajaramillomoreno/PyWKSpectra" target="_blank" rel="noopener noreferrer">Explore PyWKSpectra on GitHub →</a>
+            </div>
+          </article>
+          <article class="software-legacy">
+            <div>
+              <p class="project-kind">LEGACY SOFTWARE · DISCONTINUED</p>
+              <h3>wk_spectra</h3>
+              <p>An earlier Python implementation of Wheeler–Kiladis spectral analysis. This repository is no longer maintained; for new work, use <a href="https://github.com/ajaramillomoreno/PyWKSpectra" target="_blank" rel="noopener noreferrer">PyWKSpectra</a>.</p>
+              <a class="text-link" href="https://github.com/ajaramillomoreno/wk_spectra" target="_blank" rel="noopener noreferrer">View legacy repository →</a>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
 
-    </div>
-
-
-    <div class="publication">
-
-      <span class="year">
-        2025
-      </span>
-
-      <div>
-
-        <h3>
-          Título de otra publicación
-        </h3>
-
-        <p>
-          Apellido, N., Jaramillo Moreno, A. y Apellido, N.
-        </p>
-
-        <p>
-          <em>Climate Dynamics</em>
-        </p>
-
-        <a href="#">
-          DOI →
-        </a>
-
+    <!-- CONTACT: Modify your affiliation or email here. -->
+    <section class="section contact" id="contact">
+      <div class="container narrow">
+        <p class="section-label">05 / CONTACT</p>
+        <h2>Get in touch</h2>
+        <p>I welcome opportunities to connect with researchers and students who share an interest in tropical atmospheric dynamics, climate variability, and hydroclimatology. Whether you are exploring a new scientific question, looking for common ground between complementary approaches, or interested in developing a collaborative project, I would be glad to hear from you.</p>
+        <p>I also welcome inquiries from prospective undergraduate and graduate students interested in research projects or thesis work involving tropical circulation, convection, precipitation, climate diagnostics, and related topics. If you would like to discuss a potential idea, feel free to send me a brief introduction and describe your interests. Opportunities for supervision and collaboration depend on research fit and availability.</p>
+        <p class="contact-affiliation">Departamento de Cambio Climático<br>Instituto de Ciencias de la Atmósfera y Cambio Climático (ICAyCC)<br>Universidad Nacional Autónoma de México (UNAM)<br>Mexico City, Mexico</p>
+        <p><a class="text-link" href="mailto:ajaramillo@atmosfera.unam.mx">ajaramillo@atmosfera.unam.mx</a></p>
       </div>
+    </section>
+  </main>
 
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="docencia" class="section">
-
-  <div class="container">
-
-    <p class="section-label">
-      03
-    </p>
-
-    <h2>
-      Docencia
-    </h2>
-
-    <p>
-      En esta sección puedes incluir los cursos que impartes,
-      materiales docentes, notas de clase y otros recursos.
-    </p>
-
-    <div class="simple-list">
-
-      <div>
-        <h3>Meteorología</h3>
-        <p>Descripción breve del curso.</p>
-      </div>
-
-      <div>
-        <h3>Dinámica de la atmósfera</h3>
-        <p>Descripción breve del curso.</p>
-      </div>
-
-      <div>
-        <h3>Climatología</h3>
-        <p>Descripción breve del curso.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="estudiantes" class="section">
-
-  <div class="container">
-
-    <p class="section-label">
-      04
-    </p>
-
-    <h2>
-      Estudiantes
-    </h2>
-
-    <p>
-      Aquí puedes presentar estudiantes actuales, tesis dirigidas
-      y proyectos de investigación.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section id="contacto" class="section contact">
-
-  <div class="container">
-
-    <p class="section-label">
-      05
-    </p>
-
-    <h2>
-      Contacto
-    </h2>
-
-    <p>
-      Instituto de Ciencias de la Atmósfera y Cambio Climático
-      <br>
-      Universidad Nacional Autónoma de México
-    </p>
-
-    <p>
-      Ciudad Universitaria · Ciudad de México
-    </p>
-
-    <p>
-      <a href="mailto:TU_CORREO">
-        TU_CORREO
-      </a>
-    </p>
-
-  </div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-  <div class="container">
-
-    <p>
-      © 2026 Alejandro Jaramillo Moreno
-    </p>
-
-  </div>
-
-</footer>
-
-
+  <footer>
+    <div class="container footer-inner"><span>© 2026 Alejandro Jaramillo-Moreno</span><span>Atmospheric Science · UNAM</span></div>
+  </footer>
 </body>
 </html>

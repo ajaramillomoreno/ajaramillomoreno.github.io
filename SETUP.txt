@@ -1,0 +1,7 @@
+Academic website — name update
+
+Copy index.html, style.css, publications.html and publications.css to the root of your GitHub Pages repository. Keep your existing assets/ folder unchanged (assets/profile.jpg and assets/pywkspectra_logo.png).
+
+Only index.html was edited in this revision. The bibliography in publications.html remains EXACTLY as before, respecting the author name used for each publication.
+
+Open index.html locally in your browser, inspect the result, and commit when satisfied.
