@@ -39,6 +39,9 @@
     .project-note { max-width: 850px; border-left: 3px solid var(--accent); padding: 4px 0 4px 20px; margin-top: 24px; color: var(--muted); font-size: .92rem; font-style: normal; }
     .atlas-panel { border: 1px solid var(--line); background: var(--white); padding: 30px; border-radius: 6px; max-width: 850px; }
     .atlas-panel p:last-child, .project-prose p:last-child { margin-bottom: 0; }
+    .data-files { margin: 14px 0 22px; padding-left: 22px; line-height: 1.8; }
+    .data-files code { font-size: .9em; }
+    .data-doi { color: var(--muted); font-size: .88rem; margin-top: 8px; overflow-wrap: anywhere; }
     .reference { max-width: 900px; color: var(--muted); font-size: .94rem; overflow-wrap: anywhere; }
     @media (max-width: 720px) {
       .project-hero { padding: 55px 0; }
@@ -80,6 +83,7 @@
           <div class="project-links">
             <a href="https://doi.org/10.1175/WCAS-D-23-0151.1" target="_blank" rel="noopener noreferrer">Read the article ↗</a>
             <a href="https://github.com/ajaramillomoreno/LightningRiskMX" target="_blank" rel="noopener noreferrer">Project repository ↗</a>
+            <a href="#data">Download data ↓</a>
             <a href="../../projects.html">← All projects</a>
           </div>
         </div>
@@ -255,13 +259,58 @@
     </section>
 
 
+    <!-- ======================================================
+        06 / DATA DOWNLOAD
+    ======================================================= -->
+    <section class="project-section" id="data">
+      <div class="container">
+        <p class="section-label">06 / DATA DOWNLOAD</p>
+        <h2>Download the geospatial datasets</h2>
+
+        <div class="atlas-panel">
+          <p>
+            The original municipality-level results are available as tables in the
+            <a href="https://doi.org/10.1175/WCAS-D-23-0151.1" target="_blank" rel="noopener noreferrer">supplementary material of the published article</a>.
+            For easier use in Geographic Information Systems, <strong>LightningRiskMX</strong>
+            provides ready-to-use GeoJSON files that represent these published results
+            using municipal boundaries obtained through the CONABIO Geoportal
+            (cartography attributed to INEGI).
+          </p>
+
+          <p>The archived <strong>v1.0 dataset</strong> includes:</p>
+          <ul class="data-files">
+            <li><code>municipal_lightning_incidents.geojson</code> — fatality incidents by municipality (1998–2021).</li>
+            <li><code>state_lightning_incidents.geojson</code> — incident counts aggregated by state.</li>
+            <li><code>municipal_lightning_risk.geojson</code> — municipal risk classification (very low to very high).</li>
+          </ul>
+
+          <p>
+            <a class="text-link" href="https://doi.org/10.5281/zenodo.23525980" target="_blank" rel="noopener noreferrer">
+              Download LightningRiskMX v1.0 on Zenodo ↗
+            </a>
+          </p>
+          <p class="data-doi">Dataset DOI: <a href="https://doi.org/10.5281/zenodo.23525980" target="_blank" rel="noopener noreferrer">10.5281/zenodo.23525980</a></p>
+        </div>
+
+        <p class="project-note">
+          <strong>How to cite these data:</strong> When using the GeoJSON files, risk
+          classifications, or derived maps, please cite <strong>both</strong> the
+          original <a href="https://doi.org/10.1175/WCAS-D-23-0151.1" target="_blank" rel="noopener noreferrer">research article (2024)</a>
+          and the <a href="https://doi.org/10.5281/zenodo.23525980" target="_blank" rel="noopener noreferrer">LightningRiskMX v1.0 dataset (2026)</a>.
+          Full references are provided below. The geographic boundaries are
+          subject to the applicable INEGI/CONABIO attribution and reuse conditions.
+        </p>
+      </div>
+    </section>
+
     <!-- Bibliographic reference -->
     <section class="project-section" id="publication">
       <div class="container">
-        <p class="section-label">06 / PUBLICATION</p>
-        <h2>Reference and data</h2>
-        <p class="reference">Jaramillo, A., &amp; Dominguez, C. (2024). Mapping Lightning Risk in Mexico: Integrating Natural Hazard and Social Vulnerability. <em>Weather, Climate, and Society, 16</em>, 563–574. <a href="https://doi.org/10.1175/WCAS-D-23-0151.1" target="_blank" rel="noopener noreferrer">https://doi.org/10.1175/WCAS-D-23-0151.1</a></p>
-        <p class="reference">The project repository provides supporting geospatial data and map products: <a href="https://github.com/ajaramillomoreno/LightningRiskMX" target="_blank" rel="noopener noreferrer">LightningRiskMX on GitHub ↗</a></p>
+        <p class="section-label">07 / CITATION</p>
+        <h2>How to cite the research and data</h2>
+        <p class="reference"><strong>Original research article:</strong> Jaramillo, A., &amp; Dominguez, C. (2024). Mapping Lightning Risk in Mexico: Integrating Natural Hazard and Social Vulnerability. <em>Weather, Climate, and Society, 16</em>(3), 563–574. <a href="https://doi.org/10.1175/WCAS-D-23-0151.1" target="_blank" rel="noopener noreferrer">https://doi.org/10.1175/WCAS-D-23-0151.1</a></p>
+        <p class="reference"><strong>Geospatial dataset (v1.0):</strong> Jaramillo, A., &amp; Dominguez, C. (2026). <em>LightningRiskMX v1.0: Geospatial Representation of Lightning Fatality Incidents and Risk in Mexico</em> (Version v1.0) [Dataset]. Zenodo. <a href="https://doi.org/10.5281/zenodo.23525980" target="_blank" rel="noopener noreferrer">https://doi.org/10.5281/zenodo.23525980</a></p>
+        <p class="reference">The <a href="https://github.com/ajaramillomoreno/LightningRiskMX" target="_blank" rel="noopener noreferrer">LightningRiskMX GitHub repository ↗</a> provides documentation and the development history of these geospatial products.</p>
         <p class="project-note">The results are based on reported fatalities and historical lightning data. Potential underreporting, particularly in rural areas, and biases in lightning detection should be considered when interpreting the maps. Web-optimized geometries are intended for visualization rather than precise boundary analysis.</p>
       </div>
     </section>
