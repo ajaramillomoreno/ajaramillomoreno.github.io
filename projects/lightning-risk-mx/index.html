@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LightningRiskMX: research findings, maps, and scientific context from Jaramillo and Dominguez (2024) on lightning-related fatality risk in Mexico.">
+  <title>LightningRiskMX | Research Projects</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+
+  <!-- Styles specific to this project page. The site's main stylesheet stays unchanged. -->
+  <style>
+    .project-hero { padding: 80px 0 70px; }
+    .project-hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 160px; gap: 54px; align-items: center; }
+    .project-hero h1 { font-size: clamp(2rem, 4.3vw, 3.4rem); line-height: 1.2; margin: 15px 0; }
+    .project-subtitle { font-size: 1.17rem; color: var(--muted); max-width: 720px; }
+    .project-meta { color: var(--muted); font-size: .91rem; margin-top: 24px; }
+    .project-logo { display: block; width: 100%; max-width: 160px; height: auto; }
+    .project-links { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 22px; }
+    .project-links a { font-size: .93rem; text-decoration: none; font-weight: 600; }
+    .project-links a:hover { text-decoration: underline; }
+    .project-section { border-top: 1px solid var(--line); padding: 64px 0; }
+    .project-section h2 { margin-bottom: 22px; }
+    .project-prose { max-width: 850px; }
+    .findings-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 28px 0 28px; }
+    .finding { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: 25px; }
+    .finding strong { display: block; font-size: 2rem; color: var(--accent); line-height: 1.2; }
+    .finding span { display: block; color: var(--muted); font-size: .91rem; margin-top: 10px; }
+    .figures-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+    .research-figure { margin: 0; min-width: 0; }
+    .research-figure.wide { grid-column: 1 / -1; }
+    .figure-placeholder { border: 1px dashed #aeb7bf; background: #f3f5f6; border-radius: 4px; min-height: 240px; display: flex; align-items: center; justify-content: center; padding: 24px; color: var(--muted); font-size: .94rem; text-align: center; }
+    .research-figure.wide .figure-placeholder { min-height: 300px; }
+    .research-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
+    .research-figure figcaption { margin-top: 12px; font-size: .87rem; color: var(--muted); line-height: 1.65; }
+    .project-note { max-width: 850px; border-left: 3px solid var(--accent); padding: 4px 0 4px 20px; margin-top: 24px; color: var(--muted); font-size: .92rem; font-style: normal; }
+    .atlas-panel { border: 1px solid var(--line); background: var(--white); padding: 30px; border-radius: 6px; max-width: 850px; }
+    .atlas-panel p:last-child, .project-prose p:last-child { margin-bottom: 0; }
+    .reference { max-width: 900px; color: var(--muted); font-size: .94rem; overflow-wrap: anywhere; }
+    @media (max-width: 720px) {
+      .project-hero { padding: 55px 0; }
+      .project-hero-grid { grid-template-columns: 1fr; gap: 25px; }
+      .project-logo { max-width: 110px; }
+      .project-section { padding: 48px 0; }
+      .findings-grid, .figures-grid { grid-template-columns: 1fr; }
+      .research-figure.wide { grid-column: auto; }
+      .figure-placeholder, .research-figure.wide .figure-placeholder { min-height: 210px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main academic website navigation -->
+  <header class="header">
+    <div class="container nav">
+      <a class="name" href="../../index.html">Alejandro Jaramillo-Moreno</a>
+      <nav aria-label="Main navigation">
+        <a href="../../index.html#about">About</a>
+        <a href="../../index.html#research">Research</a>
+        <a href="../../projects.html" aria-current="page">Projects</a>
+        <a href="../../software.html">Software</a>
+        <a href="../../publications.html">Publications</a>
+        <a href="../../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Project title and branding -->
+    <section class="project-hero">
+      <div class="container project-hero-grid">
+        <div>
+          <p class="eyebrow">Research Project · Published 2024</p>
+          <h1>Mapping Lightning Risk in Mexico</h1>
+          <p class="project-subtitle">Integrating natural hazard and social vulnerability</p>
+          <p class="project-meta">Alejandro Jaramillo &amp; Christian Dominguez · <em>Weather, Climate, and Society</em> (2024)</p>
+          <div class="project-links">
+            <a href="https://doi.org/10.1175/WCAS-D-23-0151.1" target="_blank" rel="noopener noreferrer">Read the article ↗</a>
+            <a href="https://github.com/ajaramillomoreno/LightningRiskMX" target="_blank" rel="noopener noreferrer">Project repository ↗</a>
+            <a href="../../projects.html">← All projects</a>
+          </div>
+        </div>
+        <img class="project-logo" src="../../assets/lightningriskmx_logo.png" alt="LightningRiskMX research project logo">
+      </div>
+    </section>
+
+    <!-- Scientific overview -->
+    <section class="project-section" id="overview">
+      <div class="container">
+        <p class="section-label">01 / OVERVIEW</p>
+        <h2>Why map lightning risk?</h2>
+        <div class="project-prose">
+          <p>Lightning is a serious, often underestimated threat to human life. Although lightning-related mortality in Mexico has declined over time, fatal incidents continue to affect communities unevenly, especially in rural areas.</p>
+          <p>This study examines the risk of death by lightning at the municipal level across Mexico. Rather than treating lightning activity alone as a measure of risk, it combines the frequency of days with lightning with the social vulnerability of the communities exposed to those events.</p>
+          <p>The resulting maps identify areas where atmospheric hazard and social conditions overlap, providing evidence relevant to risk reduction, public safety, and local decision-making.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main results -->
+    <section class="project-section" id="results">
+      <div class="container">
+        <p class="section-label">02 / KEY FINDINGS</p>
+        <h2>Main research findings</h2>
+        <div class="findings-grid">
+          <div class="finding">
+            <strong>2,573</strong>
+            <span>Lightning-related deaths reported in Mexico during 1998–2021.</span>
+          </div>
+          <div class="finding">
+            <strong>82.1%</strong>
+            <span>Of reported fatal lightning incidents occurred in municipalities classified as high or very high risk.</span>
+          </div>
+        </div>
+        <div class="project-prose">
+          <p>Lightning-related fatalities were not distributed uniformly across the country. Important concentrations were identified in central Mexico and parts of western, southern, and southeastern Mexico.</p>
+          <p>High-risk areas include portions of the Sierra Madre Occidental, the Pacific coast, central Mexico, and the southeast. The findings show why lightning frequency must be interpreted alongside social factors, including conditions associated with rural communities and outdoor work.</p>
+          <p>Reported mortality has decreased over time, but persistent social vulnerability means that the hazard remains an important public-safety concern.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="project-section" id="methodology">
+      <div class="container">
+        <p class="section-label">03 / APPROACH</p>
+        <h2>From lightning hazard to municipal risk</h2>
+        <div class="project-prose">
+          <p>The analysis combines official lightning-fatality records for 1998–2021 with lightning observations and socioeconomic information. The physical hazard is characterized by the mean annual number of days with lightning activity, while social vulnerability is derived from a locality-level marginalization index.</p>
+          <p>A normalized risk index was first calculated for individual localities using the hazard and vulnerability components. Municipal risk was then represented by the highest locality risk within each municipality, and classified into five levels: <strong>very low, low, medium, high, and very high</strong>.</p>
+          <p>This approach highlights vulnerable localities that might be masked by municipality-wide averages.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Figure placeholders -->
+    <section class="project-section" id="figures">
+      <div class="container">
+        <p class="section-label">04 / MAPS</p>
+        <h2>Geographical distribution of lightning-related risk</h2>
+        <p class="section-intro">These three maps summarize the spatial distribution of fatal lightning incidents and municipal risk reported in the study.</p>
+
+        <div class="figures-grid">
+
+          <figure class="research-figure">
+
+            <img
+              src="figures/state_incidents.jpg"
+              alt="Geographical distribution of lightning-related fatality incidents by state in Mexico, 1998–2021"
+              loading="lazy"
+            >
+
+            <figcaption>
+              <strong>Figure 2a.</strong>
+              Spatial distribution of accumulated lightning-related
+              fatality incidents by state in Mexico during 1998–2021.
+            </figcaption>
+
+          </figure>
+
+
+
+          <figure class="research-figure">
+
+            <img
+              src="figures/municipal_incidents.jpg"
+              alt="Geographical distribution of lightning-related fatality incidents by municipality in Mexico, 1998–2021"
+              loading="lazy"
+            >
+
+            <figcaption>
+              <strong>Figure 2b.</strong>
+              Spatial distribution of accumulated fatal lightning
+              incidents by municipality in Mexico during 1998–2021.
+            </figcaption>
+
+          </figure>
+
+
+          <!-- ======================================================
+              FIGURE 6 — MUNICIPAL LIGHTNING RISK
+          ======================================================= -->
+
+          <figure class="research-figure wide">
+
+            <img
+              src="figures/municipal_risk.jpg"
+              alt="Municipal lightning-related fatality risk in Mexico, integrating lightning hazard and social vulnerability"
+              loading="lazy"
+              style="display: block; width: 100%; max-width: 750px; height: auto; margin: 0 auto;"
+            >
+
+            <figcaption>
+              <strong>Figure 6.</strong>
+              Spatial distribution of lightning-related fatality
+              risk at the municipal level in Mexico, integrating
+              lightning hazard and social vulnerability.
+              Risk is classified into five categories, from
+              very low to very high.
+            </figcaption>
+
+          </figure>
+
+
+        </div>
+        <p class="project-note"><strong>Reading the maps:</strong> A lightning incident refers to a reported event involving at least one fatality; it does not necessarily represent one death. The five risk classes are relative categories, not individual probabilities of being struck by lightning.</p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+        05 / INTERACTIVE ATLAS
+    ======================================================= -->
+
+    <section class="project-section" id="atlas">
+      <div class="container">
+
+        <p class="section-label">05 / INTERACTIVE ATLAS</p>
+
+        <h2>Explore the maps</h2>
+
+        <div class="atlas-panel">
+
+          <p>
+            Explore the spatial distribution of lightning-related
+            fatality incidents and lightning risk across Mexico
+            using our interactive atlas.
+          </p>
+
+          <p>
+            The atlas provides three complementary maps:
+            accumulated fatality incidents by state,
+            accumulated fatality incidents by municipality,
+            and municipal lightning-risk categories.
+            Users can explore individual locations, search
+            municipalities, and examine regional patterns.
+          </p>
+
+          <p>
+            <a
+              class="text-link"
+              href="maps/index.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Interactive Lightning Atlas ↗
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- Bibliographic reference -->
+    <section class="project-section" id="publication">
+      <div class="container">
+        <p class="section-label">06 / PUBLICATION</p>
+        <h2>Reference and data</h2>
+        <p class="reference">Jaramillo, A., &amp; Dominguez, C. (2024). Mapping Lightning Risk in Mexico: Integrating Natural Hazard and Social Vulnerability. <em>Weather, Climate, and Society, 16</em>, 563–574. <a href="https://doi.org/10.1175/WCAS-D-23-0151.1" target="_blank" rel="noopener noreferrer">https://doi.org/10.1175/WCAS-D-23-0151.1</a></p>
+        <p class="reference">The project repository provides supporting geospatial data and map products: <a href="https://github.com/ajaramillomoreno/LightningRiskMX" target="_blank" rel="noopener noreferrer">LightningRiskMX on GitHub ↗</a></p>
+        <p class="project-note">The results are based on reported fatalities and historical lightning data. Potential underreporting, particularly in rural areas, and biases in lightning detection should be considered when interpreting the maps. Web-optimized geometries are intended for visualization rather than precise boundary analysis.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Alejandro Jaramillo-Moreno</span>
+      <span>Atmospheric Science · UNAM</span>
+    </div>
+  </footer>
+</body>
+</html>

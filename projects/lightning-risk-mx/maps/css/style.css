@@ -1,0 +1,118 @@
+    :root {
+      --ink:#1d2939; --text:#344054; --muted:#667085; --rule:#e5e9ef;
+      --background:#f4f7fa; --paper:#fff; --accent:#115e9a; --accent-soft:#e8f3fb;
+      --shadow:0 5px 28px rgba(15,33,57,.075);
+    }
+    * {box-sizing:border-box}
+    html,body {height:100%;margin:0}
+    body {font: 15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--background);color:var(--ink)}
+    button,input,select {font:inherit}
+    button {cursor:pointer}
+    .site-header {height:70px;background:#fff;border-bottom:1px solid var(--rule);padding:0 clamp(16px,2.6vw,42px);display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand {display:flex;align-items:center;gap:12px;min-width:0}
+    .brand-icon {width:39px;height:39px;border:1px solid #bad4ea;background:#eaf5fc;border-radius:11px;display:grid;place-items:center;font-size:23px;color:#0d5791;flex-shrink:0}
+    .brand-name {font-size:17px;font-weight:750;letter-spacing:-.02em}
+    .brand-sub {font-size:11px;color:var(--muted);margin-top:1px}
+    .header-tag {border:1px solid #d8e3ed;border-radius:99px;padding:5px 12px;font-size:12px;font-weight:600;color:#4b647b;background:#f6f9fc;white-space:nowrap}
+    .layout {display:grid;grid-template-columns:360px minmax(0,1fr);min-height:calc(100vh - 70px)}
+    .side {padding:24px 24px 20px;background:#fff;border-right:1px solid var(--rule);overflow-y:auto;max-height:calc(100vh - 70px)}
+    .eyebrow {font-size:11px;letter-spacing:.14em;font-weight:750;color:var(--accent);text-transform:uppercase}
+    h1 {font-size:25px;line-height:1.19;margin:8px 0 11px;letter-spacing:-.035em}
+    .intro {font-size:13px;line-height:1.55;color:#667085;margin:0 0 21px}
+    .section-heading {font-size:12px;color:#43566b;font-weight:740;text-transform:uppercase;letter-spacing:.085em;margin:23px 0 8px}
+    .layer-choices {display:grid;gap:8px}
+    .layer-choice {display:flex;align-items:center;gap:11px;width:100%;border:1px solid #e2e8ef;background:#fff;border-radius:9px;text-align:left;padding:12px 13px;color:#314254;transition:background .18s,border-color .18s}
+    .layer-choice:hover {background:#f8fafc}
+    .layer-choice.active {border-color:#a0c8ea;background:#edf6fd;box-shadow:0 0 0 1px #cae2f4 inset}
+    .swatch {width:11px;height:11px;border-radius:3px;flex-shrink:0}
+    .choice-label {display:block;font-size:14px;font-weight:700;line-height:1.2}
+    .choice-sub {display:block;color:#6b7889;font-size:11px;margin-top:3px}
+    label {display:block;color:#344054;font-size:13px;font-weight:600;margin-bottom:7px}
+    select, input[type="search"] {width:100%;height:39px;border:1px solid #d7dee7;border-radius:7px;background:white;padding:8px 11px;color:#1d2939;outline:none;min-width:0}
+    select:focus, input:focus {border-color:#74aad0;box-shadow:0 0 0 3px rgba(29,119,187,.11)}
+    .search-row {display:flex;gap:7px}
+    .search-row input {flex:1}
+    .search-row button {border:0;background:#11659b;color:white;border-radius:7px;padding:0 12px;font-size:12px;font-weight:750}
+    .search-row button:hover {background:#0d4f7b}
+    .search-results {display:none;border:1px solid var(--rule);margin-top:8px;border-radius:8px;max-height:180px;overflow:auto;background:#fff}
+    .search-results button {display:block;border:0;background:white;text-align:left;padding:9px 11px;width:100%;border-bottom:1px solid #eef1f5;font-size:12px}
+    .search-results button:hover {background:#f2f7fc}
+    .search-results button:last-child {border-bottom:0}
+    .search-results small {display:block;color:#667085;font-size:11px}
+    .search-status {font-size:12px;color:var(--muted);min-height:1em;margin-top:7px}
+    .map-legend {position:absolute;top:20px;right:20px;z-index:550;width:258px;max-width:calc(100% - 40px);padding:14px 16px 13px;background:rgba(255,255,255,.97);border:1px solid #dfe7ef;border-radius:11px;box-shadow:0 5px 24px rgba(15,33,57,.13);pointer-events:auto}
+    .map-legend-heading {font-weight:750;font-size:13px;letter-spacing:-.01em;color:#24384a}
+    .map-legend-subheading {font-size:10px;color:#667085;margin:1px 0 11px}
+    .legend {display:flex;flex-direction:column;gap:7px}
+    .legend-row {display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;color:#485a6d}
+    .legend-row .desc {display:flex;align-items:center;gap:10px}
+    .legend-patch {width:18px;height:12px;border:1px solid rgba(15,23,42,.10);border-radius:2px}
+    .legend-row .number {font-variant-numeric:tabular-nums;color:#7b8795}
+    .legend-note {font-size:10px;color:#7b8795;margin-top:10px;line-height:1.45;padding-top:8px;border-top:1px solid #edf1f5}
+    .footnote {font-size:11px;line-height:1.55;color:#738094;margin:20px 0 0}
+    .footnote strong {color:#536277}
+    .reset-btn {width:100%;border:1px solid #d7e1eb;background:#fff;color:#285675;border-radius:8px;padding:9px 10px;margin-top:16px;font-size:12px;font-weight:650}
+    .reset-btn:hover {background:#f1f6fa}
+    .map-area {min-width:0;position:relative;background:#edf3f6}
+    #map {width:100%;height:calc(100vh - 70px);min-height:590px;background:#edf3f6}
+    .map-info {position:absolute;z-index:550;top:20px;left:20px;width:min(280px,calc(100% - 100px));background:rgba(255,255,255,.97);box-shadow:var(--shadow);border:1px solid #e3eaf0;border-radius:10px;padding:12px 15px;pointer-events:none}
+    .map-info .hint {font-size:11px;color:#748194}
+    .map-info .name {font-size:14px;font-weight:760;color:#24384a;margin:2px 0}
+    .map-info .detail {font-size:12px;color:#516578;line-height:1.45}
+    .map-bottom {position:absolute;bottom:24px;left:20px;z-index:550;padding:6px 9px;border:1px solid #e2e9ef;background:rgba(255,255,255,.94);border-radius:6px;font-size:11px;color:#58687a;pointer-events:none}
+    .leaflet-popup-content-wrapper {border-radius:10px;box-shadow:0 8px 30px rgba(18,35,58,.18)}
+    .leaflet-popup-content {margin:14px 17px;min-width:235px}
+    .popup-title {font-size:15px;font-weight:750;margin-bottom:1px;color:#1b3147}
+    .popup-subtitle {font-size:12px;color:#738094;margin-bottom:10px}
+    .popup-line {display:flex;justify-content:space-between;gap:18px;border-top:1px solid #edf0f4;padding:6px 0;font-size:12px}
+    .popup-line b {color:#263d50;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .leaflet-control-attribution {font-size:10px!important}
+    @media (max-width:950px) {
+      .layout {grid-template-columns:305px minmax(0,1fr)}
+      .side {padding:19px 16px}
+      h1 {font-size:23px}
+    }
+    @media (max-width:700px) {
+      .site-header {height:60px;padding:0 15px}
+      .brand-name {font-size:15px}
+      .header-tag {font-size:10px;padding:4px 8px}
+      .layout {display:flex;flex-direction:column}
+      .side {order:2;max-height:none;overflow:visible;padding:20px}
+      .map-area {order:1}
+      #map {height:58vh;min-height:380px}
+      .map-info {top:auto;bottom:10px;left:10px;width:min(220px,calc(100% - 20px));padding:9px 11px}
+      .map-bottom {display:none}
+      .map-legend {right:10px;top:10px;width:218px;padding:10px 12px;max-height:52%;overflow-y:auto}
+      .map-legend-subheading {margin-bottom:7px}
+      .legend {gap:4px}
+      .legend-note {font-size:9px;margin-top:6px;padding-top:5px}
+      .legend-row {font-size:11px}
+      .side h1 {font-size:23px}
+      .layer-choices {grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+      .layer-choice {padding:9px 7px;gap:5px;align-items:flex-start}
+      .swatch {width:8px;height:8px;margin-top:3px}
+      .choice-label {font-size:11px}
+      .choice-sub {display:none}
+    }
+    @media(prefers-reduced-motion:reduce) {.layer-choice{transition:none}}
+
+/* Offline installation notice when Leaflet assets have not been downloaded. */
+.missing-leaflet {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:26px;max-width:420px;background:#fff;border:1px solid #d7dee7;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.08);line-height:1.6}
+.missing-leaflet p {font-size:13px;color:#516578}
+
+/* Three-map adaptation: article link, missing-data message, responsive legends. */
+.header-link {font-size:12px;font-weight:650;color:#285f89;text-decoration:none;white-space:nowrap}
+.header-link:hover {text-decoration:underline}
+.visually-hidden {position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.map-message {position:absolute;z-index:600;top:50%;left:50%;transform:translate(-50%,-50%);width:min(420px,calc(100% - 36px));padding:19px 23px;background:rgba(255,255,255,.98);border:1px solid #d5dfe8;border-radius:11px;box-shadow:0 8px 30px rgba(15,33,57,.14);color:#283d50;font-size:13px;line-height:1.55}
+.map-message strong {display:block;font-size:15px;margin-bottom:7px}
+.map-message code {font-size:12px;background:#f2f4f8;padding:2px 4px;border-radius:4px;word-break:break-word}
+.map-message[hidden] {display:none}
+.paper-reference {margin-top:12px;padding-top:12px;border-top:1px solid #e5e9ef;font-size:11px;line-height:1.6;color:#69788a}
+.paper-reference a {color:#11659b}
+.map-legend {max-height:calc(100% - 135px);overflow-y:auto}
+@media (max-width:700px) {
+  .header-link {font-size:10px;max-width:45%;white-space:normal;text-align:right}
+  .map-message {top:52%;padding:15px}
+  .map-legend {max-height:49%}
+}

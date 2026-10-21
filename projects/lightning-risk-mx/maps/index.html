@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive maps of municipal lightning fatality incidents, state lightning fatality incidents, and municipal lightning risk in Mexico, based on Jaramillo and Dominguez (2024).">
+  <title>LightningRiskMX | Interactive Maps</title>
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">ϟ</div>
+      <div>
+        <div class="brand-name">LightningRiskMX</div>
+        <div class="brand-sub">Lightning risk and fatality incidents · Mexico</div>
+      </div>
+    </div>
+    <a class="header-link" href="https://doi.org/10.1175/WCAS-D-23-0151.1" target="_blank" rel="noopener noreferrer">Jaramillo &amp; Dominguez (2024) ↗</a>
+  </header>
+
+  <main class="layout">
+    <aside class="side">
+      <div class="eyebrow">Geospatial explorer</div>
+      <h1>Lightning Risk in Mexico</h1>
+      <p class="intro">Explore lightning-related fatality incidents and lightning risk at the state and municipal levels, based on the published research.</p>
+
+      <div class="section-heading">Select Map</div>
+      <div class="layer-choices" role="group" aria-label="Select map">
+        <button class="layer-choice active" data-map="municipal_incidents" type="button" aria-pressed="true">
+          <span class="swatch" style="background:#bb4530"></span>
+          <span><span class="choice-label">Municipal incidents</span><span class="choice-sub">Accumulated incidents · 1998–2021</span></span>
+        </button>
+        <button class="layer-choice" data-map="state_incidents" type="button" aria-pressed="false">
+          <span class="swatch" style="background:#c88328"></span>
+          <span><span class="choice-label">State incidents</span><span class="choice-sub">Incidents aggregated by state</span></span>
+        </button>
+        <button class="layer-choice" data-map="municipal_risk" type="button" aria-pressed="false">
+          <span class="swatch" style="background:#c52727"></span>
+          <span><span class="choice-label">Municipal risk</span><span class="choice-sub">Five published risk categories</span></span>
+        </button>
+      </div>
+
+      <div class="section-heading">Filter by State</div>
+      <label for="stateSelect" class="visually-hidden">Mexican state</label>
+      <select id="stateSelect" aria-label="Mexican state"><option value="">All of Mexico</option></select>
+
+      <div class="section-heading" id="searchLabel">Find a Municipality</div>
+      <form id="searchForm" class="search-row" autocomplete="off">
+        <input id="placeSearch" type="search" placeholder="e.g., Puebla, Toluca…" aria-label="Find a municipality">
+        <button type="submit">Search</button>
+      </form>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+      <div class="search-status" id="searchStatus" aria-live="polite"></div>
+
+      <button type="button" id="resetButton" class="reset-btn">Reset Map View</button>
+      <p class="footnote"><strong>Scientific note.</strong> Lightning incidents represent reported lightning-related events involving at least one fatality, rather than the number of people who died. Municipal risk is classified into five categories, from very low to very high. Simplified geometries are intended for visualization, not boundary analysis.</p>
+      <p class="paper-reference">Jaramillo, A., and C. Dominguez (2024): <em>Mapping Lightning Risk in Mexico: Integrating Natural Hazard and Social Vulnerability.</em> Weather, Climate, and Society. <a href="https://doi.org/10.1175/WCAS-D-23-0151.1" target="_blank" rel="noopener noreferrer">DOI: 10.1175/WCAS-D-23-0151.1</a>.</p>
+    </aside>
+
+    <section class="map-area" aria-label="Interactive maps of Mexico">
+      <div id="map" role="application" aria-label="Interactive map of Mexico. Use the controls to zoom, hover and click for details."></div>
+      <div id="mapMessage" class="map-message" aria-live="polite" hidden></div>
+
+      <div class="map-info" aria-live="polite">
+        <div class="hint" id="hoverHint">Geographic details</div>
+        <div class="name" id="hoverName">Explore the Map</div>
+        <div class="detail" id="hoverDetails">Hover over a region or click to view its data.</div>
+      </div>
+      <div class="map-legend" role="group" aria-labelledby="mapLegendTitle">
+        <div class="map-legend-heading" id="mapLegendTitle">Municipal incidents</div>
+        <div class="map-legend-subheading" id="mapLegendSubheading">Fatality incidents, 1998–2021</div>
+        <div id="legend" class="legend" aria-label="Map legend"></div>
+        <div class="legend-note" id="legendNote"></div>
+      </div>
+      <div class="map-bottom" id="mapBottom">Local vector data · no external basemap</div>
+    </section>
+  </main>
+
+  <!-- Place your three optimized JavaScript data files in /data/. -->
+  <!-- Missing data files are reported inside the viewer rather than silently replaced. -->
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="data/municipal_lightning_incidents.js"></script>
+  <script src="data/state_lightning_incidents.js"></script>
+  <script src="data/municipal_lightning_risk.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
