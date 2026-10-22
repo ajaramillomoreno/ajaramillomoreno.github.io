@@ -1,4 +1,8 @@
-/* SITE COLORS: Change these variables to update the appearance. */
+/* ==========================================================
+   SITE COLORS
+   Change these variables to update the appearance.
+========================================================== */
+
 :root {
   --background: #fafafa;
   --text: #20252b;
@@ -7,112 +11,86 @@
   --line: #dfe3e6;
   --white: #ffffff;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body { margin: 0; background: var(--background); color: var(--text); font-family: "Inter", Arial, sans-serif; font-size: 16px; line-height: 1.75; }
-a { color: var(--accent); }
-.container { width: min(1100px, 88%); margin: auto; }
-.narrow { max-width: 900px; margin-left: max(6%, calc((100% - 1100px)/2)); margin-right: auto; }
-.header { background: rgba(250,250,250,.97); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 100; }
-.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-.name { color: var(--text); font-family: "Libre Baskerville", Georgia, serif; font-weight: 700; text-decoration: none; font-size: .93rem; }
-nav { display: flex; flex-wrap: wrap; gap: 24px; }
-nav a { color: var(--muted); text-decoration: none; font-size: .88rem; }
-nav a:hover, nav a:focus-visible { color: var(--accent); text-decoration: underline; }
-.hero { padding: 108px 0 104px; }
-.hero-grid { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 75px; align-items: center; }
-.eyebrow, .section-label, .project-kind { color: var(--accent); font-weight: 600; font-size: .78rem; letter-spacing: .11em; text-transform: uppercase; }
-h1, h2 { font-family: "Libre Baskerville", Georgia, serif; }
-h1 { font-size: clamp(2.5rem, 5.4vw, 4.25rem); line-height: 1.18; letter-spacing: -.03em; margin: 17px 0 22px; }
-h2 { font-size: clamp(1.75rem, 3vw, 2.2rem); margin: 10px 0 30px; line-height: 1.3; }
-h3 { margin: 0 0 10px; font-size: 1.08rem; line-height: 1.5; }
-p { margin: 0 0 20px; }
-.subtitle { font-size: 1.1rem; color: var(--muted); max-width: 660px; }
-.intro { max-width: 680px; font-size: 1.06rem; margin-top: 27px; }
-.links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 28px; }
-.links a, .text-link { text-decoration: none; font-weight: 600; }
-.links a:hover, .text-link:hover { text-decoration: underline; }
-.photo-container { display: flex; justify-content: center; }
-.profile-photo { width: 260px; height: 260px; object-fit: cover; border-radius: 50%; border: 5px solid var(--white); box-shadow: 0 0 0 1px var(--line), 0 15px 40px rgba(0,0,0,.08); }
-.section { padding: 85px 0; border-top: 1px solid var(--line); }
-.section-intro { max-width: 760px; color: var(--muted); }
-.research-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 35px 72px; margin-top: 48px; }
-.research-grid article { border-top: 1px solid var(--line); padding-top: 18px; }
-.research-grid p, .project-card p { color: var(--muted); }
-.project-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-top: 36px; }
-.project-card { border: 1px solid var(--line); background: var(--white); padding: 29px; border-radius: 4px; }
-.project-kind { margin-bottom: 18px; font-size: .72rem; }
-.project-card h3 { font-family: "Libre Baskerville", Georgia, serif; font-size: 1.19rem; }
-.project-note { font-size: .88rem; font-style: italic; }
-.contact p { max-width: 760px; }
-footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted); font-size: .83rem; }
-.footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
-@media (max-width: 800px) {
-  html { scroll-padding-top: 135px; }
-  .nav { flex-direction: column; align-items: flex-start; padding: 18px 0; gap: 12px; }
-  nav { gap: 12px 18px; }
-  .hero { padding: 65px 0; }
-  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
-  .photo-container { grid-row: 1; justify-content: flex-start; }
-  .profile-photo { width: 190px; height: 190px; }
-  .section { padding: 65px 0; }
-  .research-grid, .project-grid { grid-template-columns: 1fr; gap: 22px; }
-  .narrow { margin-left: auto; margin-right: auto; }
-}
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-/* Public open-source software */
-.software-list { display: grid; gap: 32px; margin-top: 40px; }
-.software-feature { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 32px; align-items: center; padding: 32px; background: var(--white); border: 1px solid var(--line); border-radius: 10px; }
-.software-logo { display: block; width: 100%; max-width: 150px; height: auto; object-fit: contain; }
-.software-feature h3, .software-legacy h3 { margin: 6px 0 10px; font-family: "Libre Baskerville", serif; font-size: 1.3rem; }
-.software-feature p, .software-legacy p { margin: 0 0 13px; color: var(--muted); }
-.software-feature .project-kind, .software-legacy .project-kind { color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; }
-.software-legacy { border-top: 1px solid var(--line); padding: 26px 0 4px; max-width: 780px; }
-.software-legacy a { color: var(--accent); }
-@media (max-width: 600px) {
-  .software-feature { grid-template-columns: 1fr; padding: 24px; gap: 20px; }
-  .software-logo { max-width: 115px; }
+/* ==========================================================
+   BASE
+========================================================== */
+
+* {
+  box-sizing: border-box;
 }
 
-/* Contact invitation and affiliation */
-.contact-affiliation { margin-top: 38px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); }
-.contact-affiliation strong { color: var(--text); }
-.narrow p { max-width: 800px; }
-
-/* Tropical Weather & Climate Observatory */
-
-.observatory-link {
-  margin-top: 36px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  max-width: 580px;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
-.observatory-label {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 8px;
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
-.observatory-link a {
+a {
   color: var(--accent);
-  font-weight: 600;
-  font-size: 1rem;
+}
+
+.container {
+  width: min(1100px, 88%);
+  margin: auto;
+}
+
+.narrow {
+  max-width: 900px;
+  margin-left: max(6%, calc((100% - 1100px) / 2));
+  margin-right: auto;
+}
+
+/* ==========================================================
+   HEADER / NAVIGATION
+========================================================== */
+
+.header {
+  background: rgba(250, 250, 250, 0.97);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.name {
+  color: var(--text);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 700;
   text-decoration: none;
+  font-size: 0.93rem;
 }
 
-.observatory-link a:hover {
-  text-decoration: underline;
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
-.observatory-link p {
-  margin: 8px 0 0;
-  font-size: 0.88rem;
-  line-height: 1.6;
+nav a {
   color: var(--muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
 }
