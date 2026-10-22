@@ -79,3 +79,40 @@ footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted)
 .contact-affiliation { margin-top: 38px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); }
 .contact-affiliation strong { color: var(--text); }
 .narrow p { max-width: 800px; }
+
+/* Tropical Weather & Climate Observatory */
+
+.observatory-link {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  max-width: 580px;
+}
+
+.observatory-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.observatory-link a {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.observatory-link a:hover {
+  text-decoration: underline;
+}
+
+.observatory-link p {
+  margin: 8px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
