@@ -1,6 +1,6 @@
+
 /* ==========================================================
    SITE COLORS
-   Change these variables to update the appearance.
 ========================================================== */
 
 :root {
@@ -40,10 +40,12 @@ a {
 
 .container {
   width: min(1100px, 88%);
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .narrow {
+  width: min(900px, 88%);
   max-width: 900px;
   margin-left: max(6%, calc((100% - 1100px) / 2));
   margin-right: auto;
@@ -54,11 +56,11 @@ a {
 ========================================================== */
 
 .header {
-  background: rgba(250, 250, 250, 0.97);
-  border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   z-index: 100;
+  background: rgba(250, 250, 250, 0.97);
+  border-bottom: 1px solid var(--line);
 }
 
 .nav {
@@ -72,9 +74,10 @@ a {
 .name {
   color: var(--text);
   font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 0.93rem;
   font-weight: 700;
   text-decoration: none;
-  font-size: 0.93rem;
+  white-space: nowrap;
 }
 
 nav {
@@ -85,12 +88,270 @@ nav {
 
 nav a {
   color: var(--muted);
-  text-decoration: none;
   font-size: 0.88rem;
+  text-decoration: none;
 }
 
 nav a:hover,
 nav a:focus-visible {
   color: var(--accent);
   text-decoration: underline;
+}
+
+/* ==========================================================
+   HERO / INTRODUCTION
+========================================================== */
+
+.hero {
+  padding: 86px 0 94px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  align-items: start;
+  gap: 48px;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0 0 24px;
+  color: var(--text);
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.subtitle {
+  margin: 0 0 22px;
+  color: var(--accent);
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.intro {
+  max-width: 690px;
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.links a,
+.text-link {
+  font-size: 0.94rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.links a:hover,
+.links a:focus-visible,
+.text-link:hover,
+.text-link:focus-visible {
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   PROFILE PHOTO
+========================================================== */
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 55px;
+}
+
+.profile-photo {
+  display: block;
+  width: 180px;
+  height: 180px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  box-shadow: 0 0 0 1px var(--line),
+              0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================
+   SECTIONS
+========================================================== */
+
+.section {
+  padding: 76px 0 82px;
+  border-top: 1px solid var(--line);
+}
+
+.section-label {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.section h2 {
+  margin: 0 0 26px;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  line-height: 1.35;
+}
+
+.section p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.section-intro {
+  max-width: 700px;
+  color: var(--muted);
+}
+
+/* ==========================================================
+   RESEARCH
+========================================================== */
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 38px 54px;
+  margin-top: 38px;
+}
+
+.research-grid article {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.research-grid h3 {
+  margin: 0 0 12px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.research-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.contact-affiliation {
+  margin: 30px 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.85;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 26px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+/* ==========================================================
+   TABLETS / SMALL SCREENS
+========================================================== */
+
+@media (max-width: 800px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px 0;
+  }
+
+  nav {
+    gap: 10px 18px;
+  }
+
+  .hero {
+    padding: 58px 0 70px;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .photo-container {
+    grid-row: 1;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .profile-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .section {
+    padding: 58px 0 64px;
+  }
+
+  .narrow {
+    width: min(1100px, 88%);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+  }
+
+  .subtitle,
+  .intro {
+    font-size: 0.96rem;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 4px;
+  }
 }
