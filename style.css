@@ -358,3 +358,70 @@ footer {
     gap: 4px;
   }
 }
+
+
+/* ==========================================================
+   PROJECTS AND SCIENTIFIC SOFTWARE
+========================================================== */
+
+.software-list {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  margin-top: 40px;
+}
+
+.software-feature {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  align-items: start;
+  gap: 38px;
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+}
+
+.software-logo {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.software-feature h3,
+.software-legacy h3 {
+  margin: 0 0 14px;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.software-feature p,
+.software-legacy p {
+  max-width: 700px;
+  color: var(--muted);
+}
+
+.project-kind {
+  margin: 0 0 12px;
+  color: var(--accent) !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.software-legacy {
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 700px) {
+  .software-feature {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .software-logo {
+    width: 150px;
+  }
+}
+
