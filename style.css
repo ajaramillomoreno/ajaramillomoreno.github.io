@@ -1,6 +1,6 @@
-
 /* ==========================================================
    SITE COLORS
+   Alejandro Jaramillo-Moreno — Personal website
 ========================================================== */
 
 :root {
@@ -46,7 +46,6 @@ a {
 
 .narrow {
   width: min(900px, 88%);
-  max-width: 900px;
   margin-left: max(6%, calc((100% - 1100px) / 2));
   margin-right: auto;
 }
@@ -106,11 +105,14 @@ nav a:focus-visible {
   padding: 86px 0 94px;
 }
 
+/* Fixed maximum text-column width brings the photo closer
+   to the name, instead of pushing it to the far right. */
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 190px;
+  grid-template-columns: minmax(0, 620px) 180px;
   align-items: start;
-  gap: 48px;
+  justify-content: start;
+  gap: 30px;
 }
 
 .eyebrow {
@@ -173,8 +175,8 @@ nav a:focus-visible {
 
 .photo-container {
   display: flex;
-  justify-content: center;
-  padding-top: 55px;
+  justify-content: flex-start;
+  padding-top: 35px;
 }
 
 .profile-photo {
@@ -191,7 +193,7 @@ nav a:focus-visible {
 }
 
 /* ==========================================================
-   SECTIONS
+   CONTENT SECTIONS
 ========================================================== */
 
 .section {
@@ -284,9 +286,11 @@ footer {
 
 /* ==========================================================
    TABLETS / SMALL SCREENS
+   Stack the photo above the text before the desktop grid
+   becomes too narrow to accommodate both columns.
 ========================================================== */
 
-@media (max-width: 800px) {
+@media (max-width: 960px) {
   .nav {
     align-items: flex-start;
     flex-direction: column;
@@ -324,8 +328,7 @@ footer {
   }
 
   .narrow {
-    width: min(1100px, 88%);
-    max-width: 900px;
+    width: min(900px, 88%);
     margin-left: auto;
     margin-right: auto;
   }
